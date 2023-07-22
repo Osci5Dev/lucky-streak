@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Poprawiona ścieżka do pliku CSS -->
+  <link rel="stylesheet" href="/css/public.css">
+  <title>Lucky Streak</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="/img/logo.svg">
+    </div>
+    <p class="lottery-description">DO LOSOWANIA POZOSTAŁO</p>
+    <div class="timer">
+      LOSOWANIE W KAŻDĄ <span class="number">NIEDZIELE</span> O <span class="number">23:30</span>
+    </div>
+    
+    <div class="prices">
+      <div class="item">
+        <h3>AKTUALNA PULA NAGRÓD</h3>
+        <p class="green-text"><%= data.currentPrizePool %></p>
+      </div>
+      <div class="item">
+        <h3>ŁĄCZNA LICZBA KUPONÓW</h3>
+        <p class="green-text"><%= data.totalCoupons %></p>
+      </div>
+    </div>
+    
+    <div class="coupons">
+      <div class="item">
+        <h3>OSTATNIE LOSOWANIE</h3>
+        <p class="green-text"><%= data.lastDraw %></p>
+      </div>
+  
+      <div class="item">
+        <h3>ŁĄCZNA LICZBA KUPONÓW</h3>
+        <p class="green-text"><%= data.totalCouponsLastDraw %></p>
+      </div>
+  
+      <div class="item">
+        <h3>OSTATNI ZWYCIĘZCA</h3>
+        <p class="green-text"><%= data.lastWinner %></p>
+      </div>
+    </div>
+    
+    <button class="btn" id="accessBtn">Przejdz do formularza</button>
+    <p class="lottery-description">Tylko dla osób które zdobyły hasło IC</p>
+    <footer>
+      <p>WSZYSTKIE PRAWA ZASTRZEŻONE (C) 2023</p>
+      <p style="font-size: 12px; color: #ffffff9d;">Designed by Smaczny Developed by Osci5</p>
+
+      <p style="color: #944097;">Strona stworzona na potrzeby scenariusza roleplay na serwerze 5city</p>
+      <p style="font-size: 8px; color: #944097;">Ostrzeżenie: Ta strona służy wyłącznie celom rozrywkowym i nie umożliwia obstawiania za prawdziwe pieniądze. Wszystkie zakłady są zawierane za pomocą wirtualnej waluty, która nie ma wartości pieniężnej. Wygrane i przegrane w tej grze są fikcyjne i nie wpływają na rzeczywiste finanse. Granie na tej stronie powinno być postrzegane jako forma zabawy i rozrywki. Pamiętaj, że hazard może być uzależniający, dlatego graj odpowiedzialnie. Jeśli masz problemy z kontrolowaniem swojego hazardowego zachowania, skonsultuj się z odpowiednimi służbami wsparcia.</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("accessBtn").addEventListener("click", function() {
+      window.location.href = "/access";
+    });
+  </script>
+</body>
+</html>
