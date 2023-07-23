@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-// Funkcja do pobrania wartości z komórki F2
+// penis
 async function getTotalCoupons() {
     const auth = new google.auth.GoogleAuth({
       keyFile: "credentials.json",
